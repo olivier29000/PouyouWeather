@@ -1,5 +1,7 @@
 package com.example.lo.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,10 @@ public class WeatherService {
 	
 	public Weather saveWeather(Weather weather) {
 		return weatherRepository.save(weather);
+	}
+
+	public List<Weather> getAllWeather() {
+		// TODO Auto-generated method stub
+		return weatherRepository.findAll();
 	}
 }
